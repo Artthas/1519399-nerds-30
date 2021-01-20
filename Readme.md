@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Alexander Gnetov](https://up.htmlacademy.ru/htmlcss/30/user/1519399).
-* Наставник: Анна Волкова.
+* Наставник: [Анна Волкова](https://htmlacademy.ru/profile/id477715).
 
 ---
 
