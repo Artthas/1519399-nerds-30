@@ -115,7 +115,7 @@ img {
 
 .main-navigation {
     display: grid;
-    grid-template-columns: 1fr 1fr min-content;
+    grid-template-columns: 160px 1fr min-content;
     width: 1157px;
     margin: 0px auto;
     padding: 0px;
@@ -549,6 +549,18 @@ img {
     border-bottom: 2px solid var(--basic-light-red);
 }
 
+/* Inner Page Grid */
+
+.products {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    column-gap: 140px;
+    align-content: start;
+    width: 1157px;
+    margin: 60px auto;
+    padding: 0px;
+}
+
 /* Filter Form */
 
 .inner-page-heading {
@@ -558,6 +570,9 @@ img {
     color: var(--basic-black);
     background-color: var(--basic-light-gray);
     margin-top: 0px;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 100px;
 }
 
 .filter-form legend {
@@ -588,6 +603,8 @@ img {
 
 .sort-list {
     list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .sort-item a {
@@ -619,6 +636,8 @@ img {
 
 .cursors-list {
     list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 .cursors-list a {
@@ -650,6 +669,7 @@ img {
 
 .products-list {
     list-style: none;
+    grid-column: 2 / 3;
 }
 
 .products-item img {

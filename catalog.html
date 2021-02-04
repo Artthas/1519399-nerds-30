@@ -45,14 +45,14 @@
                 <label for="filter-fixed">Фиксированная</label>
               </li>
               <li class="grid-field-item">
-                <input class="grid-field-symbol" type="radio" name="grid" value="rubber" id="filter-rubber">
+                <input class="grid-field-symbol" type="radio" name="grid" value="rubber" id="filter-rubber">                  
                 <label for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="features-field">
             <legend>Особенности:</legend>
-            <ul class="field-list features-field-list">
+             <ul class="field-list features-field-list">
               <li class="features-field-item">
                 <input class="features-field-symbol" type="checkbox" name="slider" id="filter-slider" checked>
                 <label for="filter-slider">Слайдер</label>
@@ -70,29 +70,31 @@
                 <label for="filter-gallery">Галерея</label>
               </li>
               <li class="features-field-item">
-                <input class="features-field-symbol" type="checkbox" name="basket" id="filter-basket" checked>
+                 <input class="features-field-symbol" type="checkbox" name="basket" id="filter-basket" checked>
                 <label for="filter-basket">Корзина</label>
               </li>
             </ul>
           </fieldset>
           <button class="button field-button" type="submit">Показать</button>
         </form>
-        <h2 class="visually-hidden">Список готовых шаблонов</h2>
-        <span>Сортировать:</span>
-        <ul class="sort-list">
-          <li class="sort-item sort-item-current"><a>По цене</a></li>
-          <li class="sort-item"><a href="#">По типу</a></li>
-          <li class="sort-item"><a href="#">По названию</a></li>
-        </ul>
-        <ul class="cursors-list">
-          <li class="cursor-item-down"><a>Вниз</a></li>
-          <li class="cursor-item-up"><a href="#">Вверх</a></li>
-        </ul>
+        <div class="sort">
+          <h2 class="visually-hidden">Список готовых шаблонов</h2>
+          <span>Сортировать:</span>
+          <ul class="sort-list">
+            <li class="sort-item sort-item-current"><a>По цене</a></li>
+            <li class="sort-item"><a href="#">По типу</a></li>
+            <li class="sort-item"><a href="#">По названию</a></li>
+          </ul>
+          <ul class="cursors-list">
+            <li class="cursor-item-down"><a>Вниз</a></li>
+            <li class="cursor-item-up"><a href="#">Вверх</a></li>
+          </ul>
+        </div>
         <ul class="products-list">
           <li class="products-item">
             <a href="#">
               <img src="img/product/sedona.jpg" width="359" height="578" alt="Макет сайта «Седона»">
-            </a>
+             </a>
             <div class="products-item-info">
               <h3>Sedona</h3>
               <p>Информационный сайт для туристов</p>
@@ -118,7 +120,7 @@
               <p>Сайт салона красоты. Для мужчин, да.</p>
               <button class="button" type="button">9 900 ₽</button>
             </div>
-          </li>
+           </li>
           <li class="products-item">
             <a href="#">
               <img src="img/product/mishka.jpg" width="359" height="578" alt="Макет сайта «Мишка»">
