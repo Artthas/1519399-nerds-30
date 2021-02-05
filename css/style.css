@@ -426,7 +426,7 @@ img {
 
 .services-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: (3, 1fr);
     column-gap: 100px;
     list-style: none;
     margin: 0px;
@@ -517,7 +517,7 @@ img {
 
 .clients-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: (4, 1fr);
     column-gap: 110px;
     list-style: none;
     margin: 0px;
