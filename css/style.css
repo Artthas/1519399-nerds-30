@@ -131,6 +131,7 @@ img {
 }
 
 .site-navigation {
+    display: flex;
     list-style: none;
     width: 440px;
     margin: 0;
@@ -546,16 +547,16 @@ img {
 }
 
 .clients-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 100px;
-    list-style: none;
-    margin: 0px;
-    padding: 0px 40px;
+     padding: 0;
+     display: grid;
+     grid-template-columns: repeat(4, 260px);
+     grid-gap: 40px;
+     list-style: none;
+
 }
 
 .clients-item {
-    margin: 0px auto;
+    margin: auto;
 }
 
 .clients-item a {
@@ -639,6 +640,10 @@ img {
 }
 
 /* Sort */
+
+.sort {
+    display: flex;
+}
 
 .products span {
     font-size: 18px;
