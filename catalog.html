@@ -31,16 +31,16 @@
       <h1 class="inner-page-heading">Магазин готовых шаблонов</h1>
       <section class="products">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter-form" method="get" action="#">
+        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru/">
           <fieldset class="price-field">
             <legend>Стоимость:</legend>
             <div class="range-price-field">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                  <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="price-controls">
                 <label class="min-price">
@@ -102,13 +102,13 @@
             <span>Сортировать:</span>
             <div class="sort-wrapper">
               <ul class="sort-list">
-                <li class="sort-item sort-item-current"><a>По цене</a></li>
+                <li class="sort-item sort-item-current"><a href="#">По цене</a></li>
                 <li class="sort-item"><a href="#">По типу</a></li>
                 <li class="sort-item"><a href="#">По названию</a></li>
               </ul>
               <ul class="cursors-list">
                 <li class="cursor-item-down">
-                  <a>
+                  <a href="#">
                     <span class="visually-hidden">Вниз</span>
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none">
                       <path d="M5.5 10L0 0H11" fill="#231F20"/>
@@ -134,7 +134,7 @@
                 <button class="button price-button" type="button">9 900 ₽</button>
               </div>
               <a href="#">
-                <img src="img/product/sedona.jpg" width="360" height="578" alt="Макет сайта «Седона»">
+                <img src="img/product/sedona.jpg" width="358" height="578" alt="Макет сайта «Седона»">
               </a>
             </li>
             <li class="products-item">
@@ -144,7 +144,7 @@
                 <button class="button price-button" type="button">9 900 ₽</button>
               </div>
               <a href="#">
-                <img src="img/product/pink.jpg" width="360" height="578" alt="Макет сайта «Пинк»">
+                <img src="img/product/pink.jpg" width="358" height="578" alt="Макет сайта «Пинк»">
               </a>
             </li>
             <li class="products-item">
@@ -154,7 +154,7 @@
                 <button class="button price-button" type="button">9 900 ₽</button>
               </div>
               <a href="#">
-                <img src="img/product/barbershop.jpg" width="360" height="578" alt="Макет сайта «Барбершоп»">
+                <img src="img/product/barbershop.jpg" width="358" height="578" alt="Макет сайта «Барбершоп»">
               </a>
             </li>
             <li class="products-item">
@@ -164,7 +164,7 @@
                 <button class="button price-button" type="button">9 900 ₽</button>
               </div>
               <a href="#">
-                <img src="img/product/mishka.jpg" width="360" height="578" alt="Макет сайта «Мишка»">
+                <img src="img/product/mishka.jpg" width="358" height="578" alt="Макет сайта «Мишка»">
               </a>
             </li>
             <li class="products-item">
@@ -174,7 +174,7 @@
                 <button class="button price-button" type="button">9 900 ₽</button>
               </div>
               <a href="#">
-                <img src="img/product/aplus.jpg" width="360" height="578" alt="Макет сайта «Аплюс»">
+                <img src="img/product/aplus.jpg" width="358" height="578" alt="Макет сайта «Аплюс»">
               </a>
             </li>
             <li class="products-item">
@@ -208,14 +208,20 @@
     <footer class="main-footer">
       <section class="footer-contacts">
         <div class="footer-contacts-wrapper">
-          <h2 class="visually-hidden">Как нас найти</h2>
-          <span>Nёrds Design Studio</span>
-          <address class="footer-address">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</address>
-          <span>тел.</span><a class="footer-phone" href="tel:+78122757575">+7 (812) 275 75-75</a>
-          <p><a class="button footer-contacts-button" href="#">Напишите нам</a></p>
+          <div class="footer-contacts-info">
+            <h2 class="visually-hidden">Как нас найти</h2>
+            <span>Nёrds Design Studio</span>
+            <address class="footer-address">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</address>
+            <span>тел.</span><a class="footer-phone" href="tel:+78122757575">+7 (812) 275 75-75</a>
+            <p><a class="button footer-contacts-button" href="#">Напишите нам</a></p>
+          </div>
         </div>
-        <img class="map-marker-img" src="img/map-marker.png" width="231" height="190" alt="Точка на карте нашего расположения">
-        <img class="map-img" src="img/map.jpg" width="1440" height="416" alt="Карта с местом нашего расположения">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003028!2d30.320858716011134!3d59.
+          9387191690543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!
+          2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_
+          QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1613631117263!5m2!1sru!2s"
+          width="1440" height="416" title="Офис компании по адресу ул. Б. Конюшенная 19/8, Санкт-Петербург" allowfullscreen>
+        </iframe>
       </section>
       <div class="footer-index-columns">
         <section class="footer-social">
@@ -223,16 +229,19 @@
           <ul>
             <li>
               <a class="social-button social-button-vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
                 <img src="img/icon/vk-icon.svg" width="26" height="15" alt="Логотип «Вконтакте»">      
               </a>
             </li>
             <li>
               <a class="social-button social-button-fb" href="#">
+                <span class="visually-hidden">Фейсбук</span>
                 <img src="img/icon/fb-icon.svg" width="12" height="22" alt="Логотип «Фейсбук»">
               </a>
             </li>
             <li>
               <a class="social-button social-button-ig" href="#">
+                <span class="visually-hidden">Инстаграм</span>
                 <img src="img/icon/ig-icon.svg" width="21" height="21" alt="Логотип «Инстаграм»">
               </a>
             </li>
@@ -245,7 +254,7 @@
         </section>
       </div>
     </footer>
-    <section class="write-us visually-hidden">
+    <section class="write-us">
       <h2>Напишите нам</h2>
       <form class="message-form" action="#" method="post">
         <p>
@@ -257,11 +266,13 @@
           <input class="user-email" id="user-email" type="email" name="email" placeholder="email@example.com">
         <p>
           <label for="user-letter">Текст письма:</label>
-          <input class="user-letter" id="user-letter" type="text" name="letter" placeholder="В свободной форме">
+          <textarea class="user-letter" id="user-letter" name="letter" rows="5">В свободной форме</textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button write-us-button" type="submit">Отправить</button>
       </form>
-      <button class="write-us-close" type="button">Закрыть</button>
+      <button class="write-us-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
