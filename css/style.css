@@ -227,7 +227,7 @@ img {
     min-height: 308px;
     background-color: var(--basic-white);
     margin: 0px;
-    padding: 45px 50px;
+    padding: 47px 50px;
     z-index: 1;
 }
 
@@ -277,11 +277,14 @@ img {
 .footer-social ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     list-style: none;
     margin: 0px;
     padding: 0px;
-    width: 261px;
+    width: 269px;
+}
+
+.footer-social li {
+    margin: 0px 5px;
 }
 
 .footer-social a {
@@ -317,6 +320,7 @@ img {
 /* Discount */
 
 .discount span {
+    display: block;
     font-size: 36px;
     line-height: 36px;
     font-weight: bold;
@@ -689,7 +693,7 @@ img {
     column-gap: 140px;
     width: 1160px;
     margin: 40px auto;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     padding: 0px;
 }
 
@@ -821,12 +825,16 @@ img {
     width: 260px;
     margin: 0 40px 5px 0;
 }
+
+.client-htmlacademy {
+    margin-bottom: -5px;
+}
   
 .clients-item:not(:nth-child(4n))::after {
     content: "";
     position: absolute;
-    top: 25px;
-    right: -22px;
+    top: 17px;
+    right: -20px;
     width: 2px;
     height: 52px;
     background-color: var(--basic-light-gray);
@@ -861,6 +869,7 @@ img {
 
 .site-navigation .site-navigation-item-current {
     border-bottom: 2px solid var(--basic-light-red);
+    padding-bottom: 13px;
 }
 
 /* Inner Page Grid */
@@ -871,7 +880,7 @@ img {
     column-gap: 140px;
     align-content: start;
     width: 1160px;
-    margin: 55px auto;
+    margin: 58px auto;
     margin-bottom: 60px;
     padding: 0px;
 }
@@ -886,8 +895,8 @@ img {
     background-color: var(--basic-light-gray);
     margin-top: 0px;
     text-align: center;
-    padding-top: 75px;
-    padding-bottom: 110px;
+    padding-top: 72px;
+    padding-bottom: 107px;
 }
 
 .filter-form legend {
@@ -896,6 +905,7 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     color: var(--basic-black);
+    margin-bottom: -5px;
 }
 
 .filter-form label {
@@ -913,7 +923,7 @@ img {
 
 .range-price-field {
     width: 260px;
-    margin-top: 50px;
+    margin-top: 52px;
 }
 
 .range-controls {
@@ -921,7 +931,7 @@ img {
     height: 41px;
     background-color: var(--basic-light-gray);
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
@@ -1047,7 +1057,7 @@ img {
 }
 
 .filter-form .grid-field {
-    margin-bottom: 40px;
+    margin-bottom: 46px;
 }
 
 .filter-form .features-field {
@@ -1149,7 +1159,7 @@ img {
     column-gap: 40px;
     list-style: none;
     margin: 0px;
-    margin-top: 50px;
+    margin-top: 47px;
     padding: 0px;
 }
 
@@ -1170,7 +1180,7 @@ img {
     margin-bottom: -5px;
     padding-top: 40px;
     border-radius: 5px;
-    border: 1px solid var(--basic-light-gray);
+    border: 2px solid var(--basic-light-gray);
 }
 
 .products-item a {
@@ -1242,7 +1252,7 @@ img {
     column-gap: 11px;
     list-style: none;
     margin: 0px;
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 0px;
 }
 
