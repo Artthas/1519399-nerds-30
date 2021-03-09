@@ -50,9 +50,9 @@
             </li>
           </ul>
           <div class="features-item-controls">
-            <button class="current-button" type="button" aria-label="Первый слайд"></button>
-            <button type="button" aria-label="Второй слайд"></button>
-            <button type="button" aria-label="Третий слайд"></button>
+            <button class="slide-button slide-button-first slide-button-current" type="button" aria-label="Первый слайд"></button>
+            <button class="slide-button slide-button-second" type="button" aria-label="Второй слайд"></button>
+            <button class="slide-button slide-button-third" type="button" aria-label="Третий слайд"></button>
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@
           </li>
           <li class="services-item services-item-application">
             <h3>Приложения</h3>
-            <p>Покорите топ 10 приложений в AppStore и Google Play</p>
+            <p>Покорите топ&hyphen;10 приложений<br>в AppStore и Google Play</p>
             <a class="button services-button services-button-application" href="#">Заказать</a>
           </li>
           <li class="services-item services-item-presentation">
@@ -108,7 +108,7 @@
           <li class="clients-item client-htmlacademy"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo/client1-logo.png" width="199" height="68" alt="Логотип «ЭйчТиЭмЭль Экадеми»"></a></li>
           <li class="clients-item"><a href="#"><img src="img/logo/client2-logo.png" width="209" height="90" alt="Логотип «Барбершоп Бородински»"></a></li>
           <li class="clients-item"><a href="#"><img src="img/logo/client3-logo.png" width="185" height="52" alt="Логотип «Пинк»"></a></li>
-          <li class="clients-item"><a href="#"><img src="img/logo/client4-logo.png" width="173" height="84" alt="Логотип «Мишка»"></a></li>
+          <li class="clients-item client-mishka"><a href="#"><img src="img/logo/client4-logo.png" width="173" height="84" alt="Логотип «Мишка»"></a></li>
         </ul>
       </section>
     </main>
@@ -119,7 +119,7 @@
             <h2 class="visually-hidden">Как нас найти</h2>
             <span>Nёrds Design Studio</span>
             <address class="footer-address">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д. 19/8</address>
-            <span>тел. </span><a class="footer-phone" href="tel:+78122757575">+7 (812) 275 75-75</a>
+            <span>тел. </span><a class="footer-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
             <p><a class="button footer-contacts-button" href="#">Напишите нам</a></p>
           </div>
         </div>
@@ -173,7 +173,7 @@
           <input class="user-email" id="user-email" type="email" name="email" placeholder="email@example.com">
         <p>
           <label for="user-letter">Текст письма:</label>
-          <textarea class="user-letter" id="user-letter" name="letter" rows="5">В свободной форме</textarea>
+          <textarea class="user-letter" id="user-letter" name="letter" rows="5" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button write-us-button" type="submit">Отправить</button>
       </form>
@@ -181,5 +181,110 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    <script>
+          /* Features List */
+
+      let featuresItem = document.querySelectorAll('.features-item');
+      let slideButton = document.querySelectorAll('.slide-button');
+
+      let slideButtonClick = function (item, button) {
+        button.addEventListener('click', function () {
+          document.querySelector('.features-item-current').classList.remove('features-item-current');
+          document.querySelector('.slide-button-current').classList.remove('slide-button-current');
+          item.classList.add('features-item-current');
+          button.classList.add('slide-button-current');
+        });
+      }
+      for (var i = 0; i < featuresItem.length; i++) {
+        slideButtonClick(featuresItem[i], slideButton[i]);
+      }
+          /* Write Us */
+
+      let writeUs = document.querySelector('.write-us');
+      let buttonOpenWriteUs = document.querySelector('.footer-contacts-button');
+      let buttonCloseWriteUs = writeUs.querySelector('.write-us-close');
+      let messageForm = writeUs.querySelector('.message-form');
+      let messageName = writeUs.querySelector('.user-name');
+      let messageEmail = writeUs.querySelector('.user-email');
+      let messageLetter = writeUs.querySelector('.user-letter');
+      let classValidation = document.querySelectorAll('.message-form-validation');
+
+      /* Checking Validation */
+
+      let isStorageSupport = true;
+      let storageName = "";
+      let storageEmail = "";
+
+      try {
+        storageName = localStorage.getItem("name");
+        storageEmail = localStorage.getItem("email");
+
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      /* Opening Write Us */
+
+      buttonOpenWriteUs.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        writeUs.classList.add('write-us-show');
+        if (storageName) {
+          messageName.value = storageName;
+          if (storageEmail) {
+            messageEmail.value = storageEmail;
+          } else {
+            messageEmail.focus();
+          }
+          messageLetter.focus();
+        } else {
+          messageName.focus();
+        }
+      });
+
+      /* Closing Write Us */
+
+      buttonCloseWriteUs.addEventListener('click', function () {
+        writeUs.classList.remove('write-us-show');
+        classValidation = document.querySelectorAll('.message-form-validation');
+        for (let i = 0; i < classValidation.length; i++) {
+          classValidation[i].classList.remove('message-form-validation');
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (writeUs.classList.contains("write-us-show")) {
+            evt.preventDefault();
+            writeUs.classList.remove("write-us-show");
+            classValidation = document.querySelectorAll('.message-form-validation');
+            for (let i = 0; i < classValidation.length; i++) {
+              classValidation[i].classList.remove('message-form-validation');
+            }
+          }
+        }
+      });
+
+      /* Validation */
+
+      messageForm.addEventListener("submit", function (evt) {
+        if (!messageName.value || !messageEmail.value || !messageLetter.value) {
+          evt.preventDefault();
+          if (!messageName.value) {
+            messageName.classList.add('message-form-validation');
+          }
+          if (!messageEmail.value) {
+            messageEmail.classList.add('message-form-validation');
+          }
+          if (!messageLetter.value) {
+            messageLetter.classList.add('message-form-validation');
+          }
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("name", messageName.value);
+            localStorage.setItem("email", messageEmail.value);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
