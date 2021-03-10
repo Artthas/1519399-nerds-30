@@ -64,9 +64,10 @@
  /* Closing Write Us */
 
  buttonCloseWriteUs.addEventListener('click', function () {
+  writeUs.classList.remove("write-us-error");
   wrapper.classList.remove('write-us-wrapper');
-   writeUs.classList.remove('write-us-show');
-   classValidation = document.querySelectorAll('.message-form-validation');
+  writeUs.classList.remove('write-us-show');
+  classValidation = document.querySelectorAll('.message-form-validation');
    for (let i = 0; i < classValidation.length; i++) {
      classValidation[i].classList.remove('message-form-validation');
    }
@@ -76,6 +77,7 @@
    if (evt.keyCode === 27) {
      if (writeUs.classList.contains("write-us-show")) {
        evt.preventDefault();
+       writeUs.classList.remove("write-us-error");
        wrapper.classList.remove('write-us-wrapper');
        writeUs.classList.remove("write-us-show");
        classValidation = document.querySelectorAll('.message-form-validation');
@@ -91,6 +93,9 @@
  messageForm.addEventListener("submit", function (evt) {
    if (!messageName.value || !messageEmail.value || !messageLetter.value) {
      evt.preventDefault();
+     writeUs.classList.remove("write-us-error");
+     writeUs.offsetWidth = writeUs.offsetWidth;
+     writeUs.classList.add("write-us-error");
      if (!messageName.value) {
        messageName.classList.add('message-form-validation');
      }
