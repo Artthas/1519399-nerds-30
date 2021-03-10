@@ -161,130 +161,28 @@
         </section>
       </div>
     </footer>
-    <section class="write-us">
-      <h2>Напишите нам</h2>
-      <form class="message-form" action="#" method="post">
-        <p>
-          <label for="user-name">Ваше имя:</label>
-          <input class="user-name" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="user-email">Ваш email:</label>
-          <input class="user-email" id="user-email" type="email" name="email" placeholder="email@example.com">
-        <p>
-          <label for="user-letter">Текст письма:</label>
-          <textarea class="user-letter" id="user-letter" name="letter" rows="5" placeholder="В свободной форме"></textarea>
-        </p>
-        <button class="button write-us-button" type="submit">Отправить</button>
-      </form>
-      <button class="write-us-close" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-    </section>
-    <script>
-          /* Features List */
-
-      let featuresItem = document.querySelectorAll('.features-item');
-      let slideButton = document.querySelectorAll('.slide-button');
-
-      let slideButtonClick = function (item, button) {
-        button.addEventListener('click', function () {
-          document.querySelector('.features-item-current').classList.remove('features-item-current');
-          document.querySelector('.slide-button-current').classList.remove('slide-button-current');
-          item.classList.add('features-item-current');
-          button.classList.add('slide-button-current');
-        });
-      }
-      for (var i = 0; i < featuresItem.length; i++) {
-        slideButtonClick(featuresItem[i], slideButton[i]);
-      }
-          /* Write Us */
-
-      let writeUs = document.querySelector('.write-us');
-      let buttonOpenWriteUs = document.querySelector('.footer-contacts-button');
-      let buttonCloseWriteUs = writeUs.querySelector('.write-us-close');
-      let messageForm = writeUs.querySelector('.message-form');
-      let messageName = writeUs.querySelector('.user-name');
-      let messageEmail = writeUs.querySelector('.user-email');
-      let messageLetter = writeUs.querySelector('.user-letter');
-      let classValidation = document.querySelectorAll('.message-form-validation');
-
-      /* Checking Validation */
-
-      let isStorageSupport = true;
-      let storageName = "";
-      let storageEmail = "";
-
-      try {
-        storageName = localStorage.getItem("name");
-        storageEmail = localStorage.getItem("email");
-
-      } catch (err) {
-        isStorageSupport = false;
-      }
-
-      /* Opening Write Us */
-
-      buttonOpenWriteUs.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        writeUs.classList.add('write-us-show');
-        if (storageName) {
-          messageName.value = storageName;
-          if (storageEmail) {
-            messageEmail.value = storageEmail;
-          } else {
-            messageEmail.focus();
-          }
-          messageLetter.focus();
-        } else {
-          messageName.focus();
-        }
-      });
-
-      /* Closing Write Us */
-
-      buttonCloseWriteUs.addEventListener('click', function () {
-        writeUs.classList.remove('write-us-show');
-        classValidation = document.querySelectorAll('.message-form-validation');
-        for (let i = 0; i < classValidation.length; i++) {
-          classValidation[i].classList.remove('message-form-validation');
-        }
-      });
-
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          if (writeUs.classList.contains("write-us-show")) {
-            evt.preventDefault();
-            writeUs.classList.remove("write-us-show");
-            classValidation = document.querySelectorAll('.message-form-validation');
-            for (let i = 0; i < classValidation.length; i++) {
-              classValidation[i].classList.remove('message-form-validation');
-            }
-          }
-        }
-      });
-
-      /* Validation */
-
-      messageForm.addEventListener("submit", function (evt) {
-        if (!messageName.value || !messageEmail.value || !messageLetter.value) {
-          evt.preventDefault();
-          if (!messageName.value) {
-            messageName.classList.add('message-form-validation');
-          }
-          if (!messageEmail.value) {
-            messageEmail.classList.add('message-form-validation');
-          }
-          if (!messageLetter.value) {
-            messageLetter.classList.add('message-form-validation');
-          }
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem("name", messageName.value);
-            localStorage.setItem("email", messageEmail.value);
-          }
-        }
-      });
-    </script>
+    <div class="wrapper">
+      <section class="write-us">
+        <h2>Напишите нам</h2>
+        <form class="message-form" action="#" method="post">
+          <p>
+            <label for="user-name">Ваше имя:</label>
+            <input class="user-name" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="user-email">Ваш email:</label>
+            <input class="user-email" id="user-email" type="email" name="email" placeholder="email@example.com">
+          <p>
+            <label for="user-letter">Текст письма:</label>
+            <textarea class="user-letter" id="user-letter" name="letter" rows="5" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="button write-us-button" type="submit">Отправить</button>
+        </form>
+        <button class="write-us-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
