@@ -57,6 +57,7 @@
     --basic-extra-dark-black: rgba(0, 1, 1, 0.25);
     --basic-extra-other-black: rgba(0, 0, 0, 0.0001);
     --basic-super-light-gray: rgba(40, 49, 54, 0.3);
+    --basic-shadow: rgba(0, 1, 1, 0.1);
 }
 
 /* Global */
@@ -505,22 +506,22 @@ img {
     border-radius: 3px;
     color: var(--basic-white);
     background-color: var(--basic-light-red);
-    padding: 15px 55px;
+    padding: 15px 10px;
     padding-top: 17px;
     border: none;
     box-sizing: border-box;
     width: max-content;
     max-width: 100%;
     display: block;
+    text-align: center;
 }
 
 .features-item .button {
-    max-width: 360px;
+    width: 260px;
 }
 
 .services-button {
-    padding-right: 40px;
-    padding-left: 40px;
+    width: 160px;
 }
 
 .services-button-application {
@@ -534,8 +535,7 @@ img {
 .field-button {
     box-sizing: border-box;
     width: 260px;
-    height: 50px;
-    padding: 0px;
+    padding: 17px 10px 15px 10px;
     margin: 0px;
     background-color: var(--basic-light-gray);
     color: var(--basic-black);
@@ -609,7 +609,7 @@ img {
 .button:active {
     background-color: var(--basic-dark-red);
     color: var(--basic-extra-black);
-    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .services-button-application:active {
@@ -641,7 +641,7 @@ img {
 
 .social-button:active {
     background-color: var(--basic-dark-red);
-    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .social-button:active img {
@@ -739,12 +739,13 @@ img {
 .services {
     width: 1160px;
     margin: 0px auto;
-    padding: 80px 0px;
+    padding: 40px 0px 80px 0px;
     border-bottom: 2px solid var(--basic-light-gray);
 }
 
 .services-list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -755,6 +756,7 @@ img {
     width: 300px;
     background-repeat: no-repeat;
     background-position: top;
+    margin-top: 40px;
 }
 
 .services-item:not(:nth-of-type(3n)) {
@@ -1427,7 +1429,7 @@ img {
 .pagination-item a:active {
     background-color: var(--basic-extra-dark-gray);
     color: var(--basic-extra-black);
-    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .pagination-item-current a,
